@@ -8,8 +8,13 @@ COPY uv.lock uv.lock
 COPY pyproject.toml pyproject.toml
 COPY src/ src/
 COPY data/ data/
+COPY README.md README.md
+COPY LICENSE LICENSE
+COPY models/ models/
+COPY reports/ reports/
+
 
 WORKDIR /
-RUN uv sync --locked --no-cache
+RUN uv sync --locked --no-cache --no-install-project
 
 ENTRYPOINT ["uv", "run", "src/m6_cookiecutter/train.py"]
