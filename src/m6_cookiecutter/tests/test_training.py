@@ -53,7 +53,8 @@ def test_error_on_wrong_shape():
     assert len(train_dataset) == N_train, "Dataset did not have the correct number of samples"
 
 
-@pytest.mark.parametrize("batch_size", [32, 64])
+
+
 #"""
 #Test the forward pass of MyAwesomeModel with different batch sizes.
 
@@ -67,6 +68,7 @@ def test_error_on_wrong_shape():
 #                values (32 and 64), allowing comprehensive testing across various
 #                batch sizes to ensure the model handles different input dimensions
 #                correctly.
+@pytest.mark.parametrize("batch_size", [32, 64])
 def test_model(batch_size: int) -> None:
     # Initialize the model
     model = MyAwesomeModel()
