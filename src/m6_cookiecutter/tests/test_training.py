@@ -55,19 +55,7 @@ def test_error_on_wrong_shape():
 
 
 
-#"""
-#Test the forward pass of MyAwesomeModel with different batch sizes.
 
-#This test verifies that the model correctly processes input tensors of shape
-#(batch_size, 1, 28, 28) representing grayscale images and produces output
-#of the expected shape (batch_size, 10) for 10-class classification.
-
-#Args:
-#    batch_size: The batch size to use for testing. The @pytest.mark.parametrize
-#                decorator runs this test multiple times with different batch_size
-#                values (32 and 64), allowing comprehensive testing across various
-#                batch sizes to ensure the model handles different input dimensions
-#                correctly.
 @pytest.mark.parametrize("batch_size", [32, 64])
 def test_model(batch_size: int) -> None:
     # Initialize the model
