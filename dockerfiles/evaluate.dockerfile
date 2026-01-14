@@ -18,4 +18,4 @@ WORKDIR /
 ENV UV_LINK_MODE=copy
 RUN --mount=type=cache,target=/root/.cache/uv uv sync
 
-ENTRYPOINT ["uv", "run", "src/m6_cookiecutter/train.py"]
+ENTRYPOINT ["uv", "run", "src/m6_cookiecutter/evaluate.py"]
